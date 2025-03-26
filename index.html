@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eco-Guru - Sustainable Eco-Friendly Products</title>
@@ -10,19 +9,138 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navbar Include -->
     <div data-include="components/navbar.html"></div>
 
-    <!-- Your Homepage Content -->
-    <main class="container">
-        <h1>Welcome to Eco-Guru</h1>
-        <p>Sustainable products for a greener planet</p>
-    </main>
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Sustainable Living Made Beautiful</h1>
+                <p>Discover our eco-friendly alternatives that don't compromise on style or quality</p>
+                <a href="shop.html" class="cta-button">Shop Now</a>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer Include -->
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Our Best Sellers</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Bamboo Toothbrush Set" loading="lazy">
+                        <span class="product-badge">Eco Choice</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bamboo Toothbrush Set</h3>
+                        <p class="product-description">100% biodegradable with charcoal-infused bristles</p>
+                        <div class="product-meta">
+                            <span class="price">$12.99</span>
+                            <a href="shop.html#toothbrushes" class="view-button">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Palm Leaf Plates" loading="lazy">
+                        <span class="product-badge">New Arrival</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Palm Leaf Dinnerware Set</h3>
+                        <p class="product-description">Compostable plates for elegant zero-waste dining</p>
+                        <div class="product-meta">
+                            <span class="price">$24.99</span>
+                            <a href="shop.html#tableware" class="view-button">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1532444458054-01a7dd3e9fca?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Hemp Tote Bag" loading="lazy">
+                        <span class="product-badge">Staff Pick</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Hemp Tote Bag</h3>
+                        <p class="product-description">Durable & stylish alternative to plastic bags</p>
+                        <div class="product-meta">
+                            <span class="price">$18.99</span>
+                            <a href="shop.html#bags" class="view-button">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Gallery -->
+    <section class="product-gallery">
+        <div class="container">
+            <h2 class="section-title">Eco-Friendly In Action</h2>
+            <p class="section-subtitle">See how our products make sustainable living beautiful</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Bamboo products in use" loading="lazy">
+                    <div class="gallery-caption">Our bamboo collection</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1584466977773-e625c37cdd50?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Eco tableware" loading="lazy">
+                    <div class="gallery-caption">Sustainable tableware</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1520004434532-668416a08753?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Reusable bags" loading="lazy">
+                    <div class="gallery-caption">Fashionable reusable bags</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Eco packaging" loading="lazy">
+                    <div class="gallery-caption">Zero-waste packaging</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Join the Green Revolution</h2>
+            <p>Subscribe to our newsletter for eco-living tips and exclusive offers</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
     <div data-include="components/footer.html"></div>
 
-    <!-- Scripts -->
     <script src="js/includes.js"></script>
+    <script>
+        // Simple gallery lightbox functionality
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', function() {
+                const lightbox = document.createElement('div');
+                lightbox.className = 'lightbox';
+                lightbox.innerHTML = `
+                    <div class="lightbox-content">
+                        <img src="${this.src}" alt="${this.alt}">
+                        <span class="close">&times;</span>
+                        <div class="caption">${this.nextElementSibling.textContent}</div>
+                    </div>
+                `;
+                document.body.appendChild(lightbox);
+                
+                lightbox.querySelector('.close').addEventListener('click', () => {
+                    lightbox.remove();
+                });
+                
+                lightbox.addEventListener('click', (e) => {
+                    if(e.target === lightbox) lightbox.remove();
+                });
+            });
+        });
+    </script>
 </body>
 </html>
